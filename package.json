@@ -4,7 +4,9 @@
   "description": "A script for Adobe Illustrator that converts your Illustrator artwork into an html page.",
   "main": "./ai2html.js",
   "scripts": {
-    "test": "mocha --check-leaks",
+    "rollup": "rollup --config",
+    "dev": "rollup --config --watch",
+    "test": "jest",
     "prepublishOnly": "./prepublish.sh"
   },
   "repository": {
@@ -16,8 +18,18 @@
   "bugs": {
     "url": "https://github.com/newsdev/ai2html/issues"
   },
+  "homepage": "https://github.com/newsdev/ai2html#readme",
   "devDependencies": {
-    "mocha": "^8.3.2"
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/jest": "^26.0.23",
+    "babel-jest": "^27.0.5",
+    "jest": "^27.0.5",
+    "rollup": "^2.52.2",
+    "types-for-adobe": "^6.0.1"
   },
-  "homepage": "https://github.com/newsdev/ai2html#readme"
+  "dependencies": {
+    "@rollup/plugin-typescript": "^8.2.1"
+  }
 }
